@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+  <header>
+    <div class="container center-align">
+      <img src="traffic-light.gif" class="responsive-img">
+      <img src="lingscars-logo.png" class="responsive-img">
+    </div>
+  </header>
+
+  <%= yield %> 
+
+
+  <div class="container">
+    <% if @admin.nil? %>
+      <a href="/login">FOR LING ONLY</a>
+    <% else %>
+      <a href="/logout">DON'T FORGET TO LOG OUT</a>
+    <% end %>
+  </div> 
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.js"
+  integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+  crossorigin="anonymous"></script>
+<script 
+  src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script 
+  type="text/javascript" 
+  src="script.js"></script>
+</body>
+</html>
